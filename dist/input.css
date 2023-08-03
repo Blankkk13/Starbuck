@@ -5,7 +5,7 @@
 
 @layer components{
     .header{
-        @apply bg-blue-400 fixed w-full
+        @apply bg-white fixed w-full
     }
     .header .header__wrapper{
         @apply max-w-[90rem] mx-auto flex items-center justify-between p-[1rem]
@@ -20,15 +20,21 @@
     .header .header__nav{
         @apply absolute top-[5rem] left-0 w-full flex flex-col max-h-[0rem] overflow-y-hidden transition-all
         lg:static lg:flex-row lg:max-h-fit lg:w-fit lg:gap-[1rem] lg:font-semibold
-
-    .header .header__nav open{
-        @apply max-h-[28rem] transition-all 
     }
+    .header .header__nav.open{
+        @apply max-h-[28.5rem] transition-all overflow-y-scroll
     }
+    .header__actions{
+        @apply hidden lg:flex
+    }
+    
     .toggle__menu{
         @apply flex flex-col gap-[.2rem] lg:hidden
     }
     .toggle__menu span{
         @apply w-[1.5rem] h-[.2rem] bg-black block rounded-full
+    }
+    .header__actions id:signin{
+
     }
 }
