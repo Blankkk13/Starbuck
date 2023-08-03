@@ -3,4 +3,8 @@
 @tailwind utilities;
 
 
-
+@layer components{
+    .header{
+        @apply bg-white fixed w-full
+    }
+}
